@@ -1,6 +1,6 @@
 
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import './App.css';
 
 function App() {
@@ -23,13 +23,13 @@ function App() {
   };
 
   // Remove item by index
-  const handleRemoveItem = (idxToDelete) => {
-    setItems(items.filter((_, idx) => idx !== idxToDelete));
+  const handleRemoveItem = useCallback((idxToDelete) => {
+    setItems(items => items.filter((_, idx) => idx !== idxToDelete));
     setFocusedItem(-1);
     setTimeout(() => {
       if (priceInputRef.current) priceInputRef.current.focus();
     }, 0);
-  };
+  }, []);
 
   // Keyboard navigation: focus items on 'f', move with arrows, remove with Enter
   useEffect(() => {
