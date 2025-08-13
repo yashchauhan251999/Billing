@@ -80,7 +80,7 @@ function App() {
   return (
     <div className="App" style={{ maxWidth: 400, margin: '40px auto', padding: 24, border: '1px solid #ccc', borderRadius: 8, background: '#fff' }}>
       <h2 style={{ marginBottom: 0 }}>SS Garments</h2>
-      <div style={{ color: '#555', marginBottom: 24 }}>123, Main Street, City</div>
+      <div style={{ color: '#555', marginBottom: 24 }}>Gokal Bazaar, near Punjabi Market</div>
       <div style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
         <input
           type="number"
